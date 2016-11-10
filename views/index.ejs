@@ -14,10 +14,10 @@
     <div class="container" ng-controller="SimpleController">
         <div class="jumbotron">
             <h3>Filter by this input</h3>
-            <input type="text" ng-model="nameFilter" />
+            <input type="text" ng-model="filter.name" />
             <h3>Looping with the ng-repeat Directive</h3>
             <ul>
-                <li ng-repeat="person in people | filter:nameFilter | orderBy:''">{{ person.name }} - {{person.profession}}</li>
+                <li ng-repeat="person in people | filter:filter.name | orderBy:''">{{ person.name }} - {{person.profession}}</li>
             </ul>
             
         </div>
