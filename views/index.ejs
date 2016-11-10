@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="simpleApp">
 
 <head>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css">
@@ -11,20 +11,19 @@
     <header>
     </header>
 
-    <div class="container">
-        <div class="jumbotron"
-            ng-init="names=['dave','napur','heedy','shriva', 'austin']">
+    <div class="container" ng-controller="SimpleController">
+        <div class="jumbotron">
             <h3>Filter by this input</h3>
             <input type="text" ng-model="nameFilter" />
             <h3>Looping with the ng-repeat Directive</h3>
             <ul>
-                <li ng-repeat="name in names | filter:nameFilter | orderBy:''">{{ name }}</li>
+                <li ng-repeat="person in people | filter:nameFilter | orderBy:''">{{ person.name }} - {{person.profession}}</li>
             </ul>
             
         </div>
     </div>
-
     <script src="/angular.min.js"></script>
+    <script src="/simpleApp.js"></script>
 </body>
 
 </html>
