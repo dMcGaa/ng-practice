@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css">
+</head>
+
+<title>Front End Practice - Drinks</title>
+
+<body>
+    <header>
+    </header>
+
+    <div class="container">
+        <div class="jumbotron"
+            ng-init="names=['dave','napur','heedy','shriva']">
+            <h3>Looping with the ng-repeat Directive</h3>
+            <ul>
+                <li ng-repeat="name in names">{{ name }}</li>
+            </ul>
+            
+        </div>
+    </div>
+
+    <script src="/angular.min.js"></script>
+</body>
+
+</html>
