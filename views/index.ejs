@@ -13,10 +13,12 @@
 
     <div class="container">
         <div class="jumbotron"
-            ng-init="names=['dave','napur','heedy','shriva']">
+            ng-init="names=['dave','napur','heedy','shriva', 'austin']">
+            <h3>Filter by this input</h3>
+            <input type="text" ng-model="nameFilter" />
             <h3>Looping with the ng-repeat Directive</h3>
             <ul>
-                <li ng-repeat="name in names">{{ name }}</li>
+                <li ng-repeat="name in names | filter:nameFilter | orderBy:''">{{ name }}</li>
             </ul>
             
         </div>
