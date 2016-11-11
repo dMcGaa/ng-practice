@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="simpleApp">
+<html lang="en" ng-app="simple">
 
 <head>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css">
@@ -19,11 +19,14 @@
             <ul>
                 <li ng-repeat="person in people | filter:filter.name | orderBy:''">{{ person.name }} - {{person.profession}}</li>
             </ul>
-            
+            <nav-pane></nav-pane>
         </div>
     </div>
     <script src="/angular.min.js"></script>
     <script src="/simpleApp.js"></script>
+    <script src="/nav-pane/nav-pane.js"></script>
+    <script src="/panel-1/panel-1.js"></script>
+    <script src="/panel-2/panel-2.js"></script>
 </body>
 
 </html>

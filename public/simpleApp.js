@@ -1,6 +1,6 @@
-var demoApp = angular.module('simpleApp', []);
-
-demoApp.factory('simpleFactory', function(){
+angular
+.module('simple', ['simple.navPane'])
+.factory('simpleFactory', function(){
     var people = [
         {name: 'david', profession: 'developer'},
         {name: 'samson', profession: 'pilot'},
@@ -12,9 +12,8 @@ demoApp.factory('simpleFactory', function(){
         return people;
     }
     return factory;
-});
-
-demoApp.controller('SimpleController', function($scope, simpleFactory){
+})
+.controller('SimpleController', function($scope, simpleFactory){
     $scope.people = [];
     
     init();
