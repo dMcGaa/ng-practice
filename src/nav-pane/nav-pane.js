@@ -1,3 +1,6 @@
+require('../panel-1/panel-1.js');
+require('../panel-2/panel-2.js');
+
 angular.module('simple.navPane', ['simple.panel1', 'simple.panel2'])
 .controller('ctrl', ['$scope', function($scope) {
   $scope.customer = {

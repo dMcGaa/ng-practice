@@ -2,15 +2,20 @@
   "name": "ng-practice",
   "version": "1.0.0",
   "description": "practice angular 1.x",
-  "main": "index.js",
+  "main": "./src/testApp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "bundle": "webpack --entry ./src/simpleApp.js --output-filename ./dist/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.8",
     "ejs": "^2.5.2",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3"
   }
 }

@@ -1,3 +1,6 @@
+const angular = require('angular');
+const navPane = require('./nav-pane/nav-pane.js');
+
 angular
 .module('simple', ['simple.navPane'])
 .factory('simpleFactory', function(){
