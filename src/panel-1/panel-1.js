@@ -2,6 +2,6 @@ angular.module('simple.panel1', [])
 .directive('panel1', function() {
   return {
     restrict: 'E',
-    template: "<div>panel 1</div>"
+    template: require("./panel-1.tmpl.html")
   };
 });
